@@ -22,14 +22,17 @@ public class Myfilter implements Filter{
 	@Override
 	public void doFilter(ServletRequest arg0, ServletResponse arg1, FilterChain arg2)
 			throws IOException, ServletException {
-		
+		System.out.println("过滤器doFilter启动。。。。。");
 		HttpServletRequest req  = (HttpServletRequest) arg0;
 		HttpServletResponse resp = (HttpServletResponse) arg1;
-		if(req.getParameter("na")!=null) {
-			arg2.doFilter(arg0, arg1);
+		String na = req.getParameter("na");
+		System.out.println("1"+na+"2");
+		if(na==null||na.equals("")) {
+			System.out.println("na为空。。。");
+			resp.sendRedirect("login.jsp");
 		}
 		else {
-			resp.sendRedirect("login.jsp");
+				arg2.doFilter(arg0, arg1);
 		}
 		
 	}

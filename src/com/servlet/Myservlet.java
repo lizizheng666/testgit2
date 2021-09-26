@@ -46,7 +46,8 @@ public class Myservlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		String url = req.getServletPath();
-		url = url.substring(1,url.lastIndexOf("."));
+		url = url.substring(7,url.lastIndexOf("."));
+		System.out.println(url);
 		
 		Class clas = map.get(url);
 		try {
