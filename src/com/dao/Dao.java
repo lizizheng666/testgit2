@@ -6,4 +6,6 @@ public interface Dao {
 		public String login(User user);
 		
 		public String register(User user);
+		
+		
 }

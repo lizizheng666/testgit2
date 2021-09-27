@@ -1,19 +1,16 @@
 package com.pojo;
 
 public class User {
-/**
- * `sname` varchar(20) DEFAULT NULL COMMENT '账号',
-  `password` varchar(20) DEFAULT NULL COMMENT '密码',
-  `headptt` varchar(20) DEFAULT NULL COMMENT '头像',
- */
-	private String sname;
-	private String password;
-	private String headptt;
-	public String getSname() {
-		return sname;
+       private String phone;
+       private String password;
+       private String headptt;
+       private String username;
+       private double money;
+	public String getPhone() {
+		return phone;
 	}
-	public void setSname(String sname) {
-		this.sname = sname;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 	public String getPassword() {
 		return password;
@@ -27,5 +24,17 @@ public class User {
 	public void setHeadptt(String headptt) {
 		this.headptt = headptt;
 	}
-	
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public double getMoney() {
+		return money;
+	}
+	public void setMoney(double money) {
+		this.money = money;
+	}
+       
 }

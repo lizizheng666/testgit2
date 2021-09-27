@@ -25,10 +25,10 @@ public class Myfilter implements Filter{
 		System.out.println("过滤器doFilter启动。。。。。");
 		HttpServletRequest req  = (HttpServletRequest) arg0;
 		HttpServletResponse resp = (HttpServletResponse) arg1;
-		String na = req.getParameter("na");
+		String na = req.getParameter("phone");
 		System.out.println("1"+na+"2");
 		if(na==null||na.equals("")) {
-			System.out.println("na为空。。。");
+			System.out.println("phone为空。。。");
 			resp.sendRedirect("login.jsp");
 		}
 		else {
